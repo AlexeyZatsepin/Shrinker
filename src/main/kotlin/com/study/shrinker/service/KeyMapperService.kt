@@ -12,6 +12,6 @@ interface KeyMapperService {
         data class NotFound(val link: String) : Get
     }
 
-    fun add(key: String, link: String): Add
+    fun add(link: String): String
     fun getLink(key: String): Get
 }
