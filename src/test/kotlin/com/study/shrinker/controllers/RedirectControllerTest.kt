@@ -1,6 +1,5 @@
 package com.study.shrinker.controllers
 
-import com.study.shrinker.controllers.RedirectController
 import com.study.shrinker.service.KeyMapperService
 import org.junit.Before
 import org.junit.Test
@@ -11,6 +10,7 @@ import org.mockito.Mockito
 import org.mockito.MockitoAnnotations
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
+import org.springframework.test.context.TestPropertySource
 import org.springframework.test.context.junit4.SpringRunner
 import org.springframework.test.context.web.WebAppConfiguration
 import org.springframework.test.web.servlet.MockMvc
@@ -19,6 +19,7 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers.*
 import org.springframework.test.web.servlet.setup.MockMvcBuilders
 import org.springframework.web.context.WebApplicationContext
 
+@TestPropertySource(locations = arrayOf("classpath:repositories-test.properties"))
 @RunWith(SpringRunner::class)
 @SpringBootTest
 @WebAppConfiguration
