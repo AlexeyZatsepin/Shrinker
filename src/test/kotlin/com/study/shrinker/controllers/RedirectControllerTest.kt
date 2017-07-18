@@ -63,4 +63,9 @@ class RedirectControllerTest {
                 .andExpect(status().`is`(NOT_FOUND))
     }
 
+    @Test fun mainPageLoading(){
+        mock.perform(get("/"))
+                .andExpect(view().name("home"))
+    }
+
 }
